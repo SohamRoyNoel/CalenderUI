@@ -187,10 +187,14 @@ const saveTimeSheet = () => {
   while (i--) {
     // console.log("====> ", localStorage.getItem(keys[i]));
     values.push(JSON.parse(localStorage.getItem(keys[i])));
+    // values.push(localStorage.getItem(keys[i]));
   }
 
   localStorage.clear();
-  console.log(values);
+  let workHours = {
+    workingHours: values
+  };
+  console.log(JSON.stringify(workHours));
 }
 
 export default App;
